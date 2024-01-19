@@ -1,6 +1,15 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import contextShare from '../Fonction/contextShare'
 
 export const SingleItem = () => {
+    const conShare=useContext(contextShare);
+    /*const addNumber=()=>{
+        conShare.setAddedItems(conShare.addedItems.map((a)=>{if(a)}))
+    }
+    const minusNumber=()=>{
+
+    }*/
+
   return (
     <section className='singleItem'>
         <div className='imCon'>
@@ -27,17 +36,17 @@ export const SingleItem = () => {
                 </div>
                 <div className='choices-2'>
                     <label>Size</label>
-                    <select>
+                    <select id='sizeSel'>
                         <option value='xs'>XS</option>
                         <option value='s'>S</option>
-                        <option value='m'>M</option>
+                        <option value='m'defaultChecked>M</option>
                         <option value='l'>L</option>
                     </select>
                 </div>
             </div>
             <div className='choices'>
-                <p><span>-</span> <span>1</span> <span>+</span></p>
-                <button>ADD TO CART</button>
+                <p><span /*onClick={addNumber}*/>-</span> <span id='numberCom'>1</span> <span /*onClick={minusNumber}*/>+</span></p>
+                <button id='addToCartBtn'>ADD TO CART</button>
             </div>
         </div>
     </section>

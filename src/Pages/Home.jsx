@@ -21,7 +21,7 @@ const Home = () => {
         <section className='popular'>
             {
                popularProducts.map(item =>{
-                    return <Item srcImg={item.img} />
+                    return <Item srcImg={item.img} id={item.id} />
                 })
             }
         </section>
