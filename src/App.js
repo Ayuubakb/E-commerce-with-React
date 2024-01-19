@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Cart from './Pages/Cart';
 import { useEffect, useState } from 'react';
 import contextShare from './Fonction/contextShare';
+import { SingleItem } from './Pages/SingleItem';
 
 function App() {
   const [addedItems,setAddedItems] = useState([]);
@@ -18,6 +19,7 @@ function App() {
               <Route index element={<Home />}></Route>
               <Route path='/Register' element={<Register/>}></Route>
               <Route path='/Cart' element={<Cart />}></Route>
+              <Route path='/singleItem' element={<SingleItem/>}></Route>
           </Route>
         </Routes>
         </contextShare.Provider>

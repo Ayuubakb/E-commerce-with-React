@@ -387,3 +387,96 @@
   font-family: 'Franklin Gothic Medium';
   margin-bottom: 20px;
 }
+.singleItem{
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.singleItem .imCon{
+  flex: 1 0 380px;
+  height: 400px;
+}
+.singleItem .imCon img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.singleItem .infoCon{
+  flex: 1 0 380px;
+  padding: 30px;
+}
+.singleItem .infoCon .writing h1{
+  font-family: 'Franklin Gothic Medium';
+  font-size: 28px;
+  color: black;
+  margin-bottom: 15px;
+}
+.singleItem .infoCon .writing p{
+  font-family: 'Trebuchet MS';
+  font-size: 18px;
+  color: rgb(35, 35, 35);
+  margin-bottom: 18px;
+}
+.singleItem .infoCon .writing h2{
+  font-family: 'Trebuchet MS';
+  font-size: 22px;
+  color: rgb(13, 13, 13);
+}
+.singleItem .choices{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap:35px;
+  width: 60%;
+  padding: 15px;
+  justify-content: space-between;
+}
+.singleItem .choices-1{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.singleItem .choices-1 label{
+  position: relative;
+  border-radius: 50%;
+  border: none;
+  padding: 12px;
+  overflow: hidden;
+}
+.singleItem .choices-1 label input{
+  position: absolute;
+  top: -1000%;
+}
+.singleItem .choices p, .singleItem .choices label{
+  font-family: 'Trebuchet MS';
+  font-size: 18px;
+}
+.singleItem .choices select{
+  padding: 4px 15px;
+  border: none;
+  font-family: 'Trebuchet MS';
+  font-size: 16px;
+  border: solid 3px rgba(0, 0, 255, 0.712);
+  outline: none;
+  margin-left: 10px;
+}
+.singleItem .choices button{
+  padding: 8px 12px;
+  border: none;
+  background-color: rgba(0, 0, 255, 0.712);
+  color: white;
+  font-family: 'Trebuchet MS';
+  font-size: 18px;
+}
+.singleItem .choices p span{
+  font-size: 20px;
+  padding: 8px;
+}
+.singleItem .choices p span:nth-child(2){
+  border: solid 2px rgba(0, 0, 255, 0.712);
+  padding: 5px;
+  font-size: 22px;
+  border-radius: 5px;
+}
