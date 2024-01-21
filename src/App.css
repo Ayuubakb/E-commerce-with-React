@@ -444,13 +444,29 @@
 .singleItem .choices-1 label{
   position: relative;
   border-radius: 50%;
-  border: none;
+  border: solid 1px black;
   padding: 12px;
-  overflow: hidden;
+  cursor: pointer;
 }
 .singleItem .choices-1 label input{
   position: absolute;
-  top: -1000%;
+  height: 0;
+  opacity: 0;
+  width: 0;
+
+}
+.singleItem .choices-1 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 135%;
+  width: 135%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.singleItem .choices-1 label input:checked ~ .checkmark {
+  background-color: rgba(0, 0, 255, 0.712);
 }
 .singleItem .choices p, .singleItem .choices label{
   font-family: 'Trebuchet MS';
@@ -472,10 +488,12 @@
   color: white;
   font-family: 'Trebuchet MS';
   font-size: 18px;
+  cursor: pointer;
 }
 .singleItem .choices p span{
   font-size: 20px;
   padding: 8px;
+  cursor: pointer;
 }
 .singleItem .choices p span:nth-child(2){
   border: solid 2px rgba(0, 0, 255, 0.712);

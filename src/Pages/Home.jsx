@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slides from '../Components/Slides';
 import Categorie from '../Components/Categorie';
-import { categories,popularProducts } from '../data';
 import Item from '../Components/Item';
 
 const Home = () => {
-   
+   const [item,setItem]=useState([{check:null}]);
+   const [popular,setPopular]=useState([{id:null,img:null,colors:[],label:null}]);
+   useEffect(()=>{
+    fetch('/api').then(
+        res=>res.json()
+    ).then(
+        data=>{
+            setItem(data.categories)
+            setPopular(data.popularProducts)
+        }
+    )
+   },[])
   return (
     <>
         <section className='slides'>
@@ -13,15 +23,15 @@ const Home = () => {
         </section>
         <section className='categorieSec'>
             {
-                categories.map(categorie =>{
+                item.map(categorie =>{
                     return <Categorie bg={categorie.img} title={categorie.title}/>
                 })
             }
         </section>
         <section className='popular'>
             {
-               popularProducts.map(item =>{
-                    return <Item srcImg={item.img} id={item.id} />
+               popular.map(item =>{
+                    return <Item srcImg={item.img} Id={item.id} Label={item.label} Color={item.colors[0]} />
                 })
             }
         </section>

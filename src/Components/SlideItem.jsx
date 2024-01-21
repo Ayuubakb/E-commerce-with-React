@@ -1,8 +1,8 @@
 import React from 'react';
-import {sliderItems } from '../data' 
 
 
 const SlideItem = ({srcImg,title,desc,bg}) => {
+
   return (
     <div className='slideItem' style={{backgroundColor:'#'+bg+''}}>
         <div className='imgs'>

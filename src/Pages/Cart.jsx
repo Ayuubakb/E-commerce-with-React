@@ -27,7 +27,7 @@ const Cart = () => {
                 {   
                 (conShare.addedItems.length !== 0 )?
                     conShare.addedItems.map(con=>{
-                      return  <CartElement Img={con.img} nbre={con.number}/>
+                      return  <CartElement Img={con.img} nbre={con.number} id={con.id} size={con.size} Color={con.color} Label={con.label}/>
                     })
                 :<h1 style={{textAlign:'center', fontFamily:'Trebuchet MS',marginTop:'60px'}}>NO ITEMS ADDED YET</h1>
                 }

@@ -1,33 +1,31 @@
-import React,{useContext, useEffect} from 'react';
+import React,{useContext} from 'react';
 import contextShare from '../Fonction/contextShare';
 
-const CartElement = ({Img,nbre}) => {
+const CartElement = ({Img,nbre,id,size,Color,Label}) => {
     const conShare=useContext(contextShare);
     const addNumber=()=>{
         conShare.setAddedItems(conShare.addedItems.map((a)=>{
-            if(a.img === Img) a.number++;
+            if(a.id==id && a.color==Color && a.size==size) a.number++;
             return a;
         }))
     }
     const minusNumber=()=>{
         conShare.setAddedItems(conShare.addedItems.map((a)=>{
-            if(a.img === Img) a.number--;
+            if(a.id==id && a.color==Color && a.size==size) a.number--;
             return a;
         }))
-    }
-    useEffect(()=>{
         conShare.setAddedItems(conShare.addedItems.filter((a)=>{return a.number >0 }))
-    },[minusNumber])
+    }
   return (
     <div className='cartElement'>
         <div className='cartImg'>
             <img src={Img} alt='item image'/>
         </div>
         <div className='cartInfos'>
-            <h1>Product: <span>Jessie Thunder Show</span></h1>
-            <h1>ID: <span>25KJ565M</span></h1>
-            <div></div>
-            <h1>SIZE: <span>M</span></h1>
+            <h1>Product: <span>{Label}</span></h1>
+            <h1>ID: <span>{id}</span></h1>
+            <div style={{backgroundColor:Color}}></div>
+            <h1>SIZE: <span>{size.toUpperCase()}</span></h1>
         </div>
         <div className='cartOptions'>
             <div className='plusMinus'>

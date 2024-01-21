@@ -1,15 +1,25 @@
 import React from 'react'
 import SlideItem from './SlideItem';
-import { sliderItems } from '../data';
 import { useState,useEffect } from 'react';
 
 const Slides = () => {
     const slide=document.querySelectorAll('.slideItem');
+    const [sliderItems,setItem]= useState([{}]);
     const [position,setPosition]=useState(0);
     const [direction,setDirection]=useState();
 
+    useEffect(()=>{
+        fetch('/api').then(
+          res=>res.json()
+        ).then(
+            data=>{
+                setItem(data.sliderItems)
+            }
+        ) 
+      },[])
+
+      
     const handleRight=()=>{
-        console.log(sliderItems.length)
         if(position < sliderItems.length-1){
             setPosition(p=>p+1);
             setDirection('right')
@@ -39,8 +49,8 @@ const Slides = () => {
         <div className='slideIt left' onClick={handleLeft} id='leftDir'><i className="fa-solid fa-arrow-left fa-xl"></i></div>
             <div className='slideContainer'>
             {   
-            sliderItems.map(slide=>{
-                return <SlideItem srcImg={slide.img} title={slide.title} desc={slide.desc} bg={slide.bg} key={slide.id}/>
+            sliderItems.map(i=>{
+                return <SlideItem srcImg={i.img} title={i.title} desc={i.desc} bg={i.bg} key={i.id}/>
             })
             }
             </div>
