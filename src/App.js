@@ -7,6 +7,8 @@ import Cart from './Pages/Cart';
 import { useEffect, useState } from 'react';
 import contextShare from './Fonction/contextShare';
 import { SingleItem } from './Pages/SingleItem';
+import Footer from './Components/Footer';
+import { Shop } from './Pages/Shop';
 
 function App() {
   const [addedItems,setAddedItems] = useState([]);
@@ -20,10 +22,12 @@ function App() {
               <Route path='/Register' element={<Register/>}></Route>
               <Route path='/Cart' element={<Cart />}></Route>
               <Route path='/singleItem' element={<SingleItem/>}></Route>
+              <Route path='/shop' element={<Shop/>}></Route>
           </Route>
         </Routes>
         </contextShare.Provider>
       </BrowserRouter>
+      <Footer></Footer>
     </div>
   );
 }

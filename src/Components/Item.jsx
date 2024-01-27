@@ -17,7 +17,7 @@ const Item = ({srcImg,Id,Label,Color}) => {
         <img src={srcImg}></img>
         <div className='choices'>
             {!clicked?<i class="fa-solid fa-cart-shopping fa-xl" onClick={addCart}></i>:<i class="fa-solid fa-x fa-xl" onClick={addCart}></i>}
-            <Link to={`/singleItem?item=${Id}`}><i class="fa-solid fa-magnifying-glass fa-xl"></i></Link>
+            <Link to={`/singleItem?item=${Id}`} style={{textDecoration:'none', color:'black'}}><i class="fa-solid fa-magnifying-glass fa-xl"></i></Link>
             <i class="fa-regular fa-heart fa-xl"></i>
         </div>
     </div>

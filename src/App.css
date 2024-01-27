@@ -262,6 +262,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-decoration: none;
 }
 .Cart .headCart .head{
   width: 100%;
@@ -500,4 +501,67 @@
   padding: 5px;
   font-size: 22px;
   border-radius: 5px;
+}
+footer{
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: solid 3px black;
+  margin-top: 20vh;
+}
+footer div{
+  flex: 1 0 350px;
+}
+footer h1{
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium';
+  margin-bottom: 15px;
+}
+footer p, footer li{
+  font-size: 17px;
+  font-family: 'Trebuchet MS';
+  margin-bottom: 8px;
+  color: rgb(35, 35, 35);
+}
+footer .div1 .socials{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+footer ul{
+  list-style: none;
+}
+footer .div2 div{
+  display: flex;
+}
+footer .div2 div div{
+  flex: 0 1 150px;
+}
+.shopHeader{
+  padding: 25px;
+}
+.shopHeader h1{
+  margin-bottom: 25px;
+  font-family: 'Franklin Gothic Medium';
+}
+.shopHeader .filterContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopHeader .filters{
+  font-family: 'Trebuchet MS';
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+.shopHeader .filters select{
+  padding: 8px 15px;
+  border: solid 1px gray;
+  outline: none;
 }

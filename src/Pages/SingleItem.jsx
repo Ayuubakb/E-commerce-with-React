@@ -31,31 +31,11 @@ export const SingleItem = () => {
     const setSize=(e)=>{
         setChoices(c=>{return{...c,size:e.target.value}})
     }
-    /*useEffect(()=>{
-        
-        let radios=document.querySelectorAll("input[type='radio']")
-        const fct=(e)=>{
-                if(e.target.checked){
-                    console.log(e.target.value);
-                    setChoices(c=>{return{...c,color:e.target.value}})
-                }
-        }
-        radios.forEach((radio)=>{
-            radio.addEventListener('change',fct)
-        })
-
-        radios.forEach((radio)=>{
-            return()=>{radio.removeEventListener('change',fct)}
-        })
-        
-    },[])*/
-
     const fct=(e)=>{
         if(e.target.checked){
-            console.log(e.target.value);
             setChoices(c=>{return{...c,color:e.target.value}})
         }
-}
+    }
 
     const addToCart=()=>{
         const exists=(conShare.addedItems.filter((i)=>{
