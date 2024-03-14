@@ -7,10 +7,10 @@ This application contains:
 
 
 ## Demo
-![Alt text](/public/assets/im1.png)
-![Alt text](/public/assets/im2.png)
-![Alt text](/public/assets/im3.png)
-![Alt text](/public/assets/im4.png)
-![Alt text](/public/assets/im5.png)
-![Alt text](/public/assets/im6.png)
-![Alt text](/public/assets/im7.png)
+![Alt text](public/assets/im1.png)
+![Alt text](public/assets/im2.png)
+![Alt text](public/assets/im3.png)
+![Alt text](public/assets/im4.png)
+![Alt text](public/assets/im5.png)
+![Alt text](public/assets/im6.png)
+![Alt text](public/assets/im7.png)
